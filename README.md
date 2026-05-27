@@ -2,7 +2,7 @@
 
 Multi-class classification model that predicts the genre of Spotify songs across 10 genres using audio features. Built a full ML pipeline from raw data to evaluation, achieving a **macro-averaged AUC of 0.9022** on a held-out test set.
 
----
+
 
 ## The problem
 
@@ -10,7 +10,7 @@ Given Spotify's audio feature data — acousticness, danceability, energy, tempo
 
 **Dataset:** ~50,000 songs, 10 genres, 13 audio features
 
----
+
 
 ## Pipeline
 
@@ -36,7 +36,7 @@ This works because K-Means captures non-linear genre boundaries in PCA space tha
 ### 6. Gradient Boosting Classifier
 Shallow trees (`max_depth=3`) with a low learning rate (`0.05`) and 120 estimators. Shallow depth reduces overfitting on the engineered feature space; the low learning rate allows fine-grained boosting without memorizing training noise.
 
----
+
 
 ## Results
 
@@ -52,7 +52,7 @@ Shallow trees (`max_depth=3`) with a low learning rate (`0.05`) and 120 estimato
 
 Classical and Hip-Hop form the most distinct clusters in PCA space, likely because Classical has uniquely low energy/danceability and Hip-Hop has uniquely high speechiness. Rock and Hip-Hop show the most acoustic overlap — both feature high energy and loudness — which is reflected in their per-class ROC curves being the closest to the macro average.
 
----
+
 
 ## Stack
 
